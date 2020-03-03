@@ -22,9 +22,17 @@ const getUserPath = p => path.resolve(__dirname, untildify(p))
 
 // map type -> dimension
 const MAP_TYPES = {
-  OVERWORLD: 'overworld',
-  THE_NETHER: 'the_nether',
-  THE_END: 'the_end',
+  overworld: 'overworld',
+  the_nether: 'the_nether',
+  the_end: 'the_end',
+}
+
+const getMapOpts = (map) => {
+  const optMap = {
+    overworld: ['-c', 'OCEAN_GROUND'],
+    the_nether: [`--max-height=${NETHER_HEIGHT}`],
+  }
+  return optMap[map] || []
 }
 
 // dimension -> paths
@@ -71,14 +79,6 @@ const COMPRESSION_FLAGS = ARG(
 
 
 const help = ARG('h', 'help', null, 'Display help menu');
-
-const getMapOpts = (map) => {
-  const optMap = {
-    [MAP_TYPES.OVERWORLD]: ['-c', 'OCEAN_GROUND'],
-    [MAP_TYPES.THE_NETHER]: [`--max-height=${NETHER_HEIGHT}`],
-  }
-  return optMap[map] || []
-}
 
 const tileRegex = /r\.(-?\d+)\.(-?\d+)\.png/
 
@@ -134,7 +134,7 @@ const main = async () => {
   }
   
   const spawns = RENDER_MAPS.map(async map => {
-    const mapFolder = path.join(OUTPUT_FOLDER, map.toLowerCase())
+    const mapFolder = path.join(OUTPUT_FOLDER, map)
     const output = path.join(mapFolder, 'z.0')
     const dimension = MAP_TYPES[map]
     const regionsFolder = path.join(WORLD_DIR, ...DIM_DIRS[dimension])
@@ -145,7 +145,7 @@ const main = async () => {
       '-jar', BLOCK_MAP_JAR,
       'render',
       '-o', output,
-      ...getMapOpts(map.toLowerCase()),
+      ...getMapOpts(map),
       regionsFolder
     ])
     execSync(`rm ${path.join(output, 'rendered.json.gz')}`)
@@ -209,6 +209,7 @@ const main = async () => {
     )
 
     const props = {
+      mapName: map,
       dimension,
       tileSize: 512,
       maxZoom: 0,
