@@ -1,0 +1,47 @@
+{
+	"output dir": "./rendered-web",
+	"server": {
+		"server name": "Minecraaaaaaft",
+		"server description": "The best server in the world",
+		"server address": "127.0.0.1",
+		"max players": 5
+	},
+	"worlds": [
+		{
+			"name": "nether",
+			"input dir": "../lambdacraft-server-1.16/world",
+			"dimension": "NETHER",
+			"render settings": {
+				"block colors": "CAVES",
+				"shader": "RELIEF",
+				"maxY": "70"
+			},
+			"force": false
+		},
+		{
+			"name": "nether_roof",
+			"input dir": "../lambdacraft-server-1.16/world",
+			"dimension": "NETHER",
+			"render settings": {
+			},
+			"force": false
+		},
+		{
+			"name": "the_end",
+			"input dir": "../lambdacraft-server-1.16/world",
+			"dimension": "END",
+			"render settings": {
+			},
+			"force": false
+		},
+		{
+			"name": "overworld",
+			"input dir": "../lambdacraft-server-1.16/world",
+			"dimension": "OVERWORLD",
+			"render settings": {
+				"block colors": "OCEAN_GROUND"
+			},
+			"force": false
+		}
+	]
+}

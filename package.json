@@ -4,15 +4,23 @@
   "description": "Node script to compile TMS tiles for Minecraft",
   "main": "compileTileLayers.js",
   "bin": {
-    "tile-compiler": "./index.js"
+    "tile-compiler": "./run.js"
+  },
+  "scripts": {
+    "start": "./run.js",
+    "setup": "curl -Lk https://github.com/Minecraft-Technik-Wiki/BlockMap/releases/download/2.2.1/BlockMap-cli-2.2.1.jar -o blockmap.jar"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.7.2",
     "fs-extra": "^8.1.0",
+    "json5": "^2.1.3",
     "lodash": "^4.17.15",
     "minimist": "^1.2.0",
-    "untildify": "^4.0.0"
+    "node-pngquant-native": "^2.2.0",
+    "sharp": "^0.25.4",
+    "untildify": "^4.0.0",
+    "workerpool": "^6.0.0"
   }
 }

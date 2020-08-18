@@ -1,0 +1,53 @@
+{
+  maps: [
+    {
+      // directory of BlockMap's render-many output
+      dir: './rendered-web/overworld',
+
+      // directory for web tiles with zoom levels
+      outputDir: './tiles/overworld',
+
+      // name of this map in configuration
+      name: 'Overworld',
+
+      // dimension name to be included in output json, one of 'overworld', 'the_end', 'the_nether'
+      dimension: 'overworld',
+
+      // min and max region coordinate bounds
+      bounds: {
+        x: [-10, 10],
+        z: [-10, 10],
+      },
+    },
+    {
+      dir: './rendered-web/nether',
+      outputDir: './tiles/nether',
+      name: 'Nether',
+      dimension: 'the_nether',
+      bounds: {
+        x: [-10, 10],
+        z: [-10, 10],
+      },
+    },
+    {
+      dir: './rendered-web/nether_roof',
+      outputDir: './tiles/nether_roof',
+      name: 'Nether Roof',
+      dimension: 'the_nether',
+      bounds: {
+        x: [-10, 10],
+        z: [-10, 10],
+      },
+    },
+    {
+      dir: './rendered-web/the_end',
+      outputDir: './tiles/the_end',
+      name: 'The End',
+      dimension: 'the_end',
+      bounds: {
+        x: [-10, 10],
+        z: [-10, 10],
+      },
+    },
+  ]
+}
