@@ -13,3 +13,6 @@ Or with docker:
   docker built -t blocktiles .
   docker run -it -v <mc world folder>:/world -v `pwd`/tiles:/tiles -it blocktiles -m overworld,the_nether,the_end -c PNGQUANT /world
 ```
+
+
+Rename `tileConfig.json5.example` to `tileConfig.json5` and edit it to your liking
