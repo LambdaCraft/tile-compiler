@@ -115,7 +115,7 @@ const as = async () => {
                 path: path.resolve(prevFolder, `r.${point[0]}.${point[1]}.png`),
               })),
               outPath: path.resolve(zoomFolder, `r.${x/2}.${z/2}.png`),
-              outPoint: [x,z],
+              outPoint: [x/2,z/2],
             }
           }),
           _.uniqBy('outPath')

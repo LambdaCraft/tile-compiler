@@ -5,3 +5,4 @@ blockmap.jar
 blockmap/
 node_modules/
 update.sh
+.vscode/
