@@ -9,7 +9,7 @@
 	"worlds": [
 		{
 			"name": "nether",
-			"input dir": "../lambdacraft-server-1.16/world",
+			"input dir": "../../server/world",
 			"dimension": "NETHER",
 			"render settings": {
 				"block colors": "CAVES",
@@ -20,7 +20,7 @@
 		},
 		{
 			"name": "nether_roof",
-			"input dir": "../lambdacraft-server-1.16/world",
+			"input dir": "../../server/world",
 			"dimension": "NETHER",
 			"render settings": {
 			},
@@ -28,7 +28,7 @@
 		},
 		{
 			"name": "the_end",
-			"input dir": "../lambdacraft-server-1.16/world",
+			"input dir": "../../server/world",
 			"dimension": "END",
 			"render settings": {
 			},
@@ -36,7 +36,7 @@
 		},
 		{
 			"name": "overworld",
-			"input dir": "../lambdacraft-server-1.16/world",
+			"input dir": "../../server/world",
 			"dimension": "OVERWORLD",
 			"render settings": {
 				"block colors": "OCEAN_GROUND"

@@ -6,3 +6,5 @@ blockmap/
 node_modules/
 update.sh
 .vscode/
+tileConfig.json5
+pass.txt

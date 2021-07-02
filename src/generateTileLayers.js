@@ -140,6 +140,7 @@ const as = async () => {
         maxZoom: 0,
         minZoom: minZoom,
         regions: rp,
+        default: mapOpts.default,
       }
       fs.writeFileSync(path.join(outputDir, 'tile.properties.json'), JSON.stringify(props))
       console.log(`${mapOpts.name} tiles completed`)

@@ -1,6 +1,6 @@
 {
   "name": "tile-compiler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node script to compile TMS tiles for Minecraft",
   "main": "compileTileLayers.js",
   "bin": {

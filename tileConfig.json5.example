@@ -18,6 +18,12 @@
         x: [-10, 10],
         z: [-10, 10],
       },
+
+      // optional initial zoom level and center
+      default: {
+        center: [0,0],
+        zoom: 0,
+      },
     },
     {
       dir: './rendered-web/nether',
