@@ -19,7 +19,7 @@
     "lodash": "^4.17.20",
     "minimist": "^1.2.0",
     "node-pngquant-native": "^2.2.0",
-    "sharp": "^0.25.4",
+    "sharp": "^0.30.5",
     "untildify": "^4.0.0",
     "workerpool": "^6.0.0"
   }
